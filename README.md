@@ -32,3 +32,5 @@ export default {
 
 - Effector
 - React atomic router
+- ky
+- antd
