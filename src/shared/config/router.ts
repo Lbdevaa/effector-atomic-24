@@ -17,11 +17,11 @@ export const routes = {
 export const mappedRoutes = [
   {
     route: routes.auth.signIn,
-    path: "/auth/sign-in",
+    path: "/sign-in",
   },
   {
     route: routes.auth.signUp,
-    path: "/auth/sign-up",
+    path: "/sign-up",
   },
   {
     route: routes.private.posts,

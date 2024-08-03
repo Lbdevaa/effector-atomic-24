@@ -1,4 +1,10 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "123@gmail.com",
+      "password": "$2a$10$/fVEHuMNfeCFX4cRCBA3oO0SAi2escQAORzea8QlgAbZGo4uXsFOC",
+      "id": 1
+    }
+  ],
   "messages": []
 }
