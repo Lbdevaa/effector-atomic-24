@@ -34,3 +34,7 @@ export default {
 - React atomic router
 - ky
 - antd
+
+BE
+- json-server
+- json-server-auth
