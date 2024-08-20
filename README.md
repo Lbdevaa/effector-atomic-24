@@ -38,3 +38,9 @@ export default {
 BE
 - json-server
 - json-server-auth
+
+log=pas `123@gmail.com`
+
+`npm run dev`
+
+cd mock-be `npm start`

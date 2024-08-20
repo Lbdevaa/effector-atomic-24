@@ -6,5 +6,13 @@
       "id": 1
     }
   ],
-  "messages": []
+  "posts": [
+    {
+      "userId": "1",
+      "id": 1,
+      "title": "Lorem ipsum",
+      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae rerum blanditiis explicabo alias. Ducimus doloribus excepturi laboriosam. Sint consectetur quisquam cupiditate magni. Ducimus maxime ullam ex sint ipsa quos cum repellendus. Architecto, optio? Consequuntur ratione, eligendi, in nostrum quis laboriosam ullam perferendis quo",
+      "total": 1
+    }
+  ]
 }
