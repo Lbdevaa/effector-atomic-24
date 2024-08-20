@@ -1,4 +1,5 @@
 import { getPosts } from "@shared/api/posts";
+import { chainAuthorized } from "@shared/chainAuthorized";
 import { routes } from "@shared/config/router";
 import { showErrorMessageFx } from "@shared/notification";
 import { chainRoute } from "atomic-router";
@@ -24,7 +25,7 @@ sample({
 });
 
 chainRoute({
-  route: currentRoute,
+  route: chainAuthorized(currentRoute),
   beforeOpen: {
     effect: getPostsFx,
     mapParams: () => ({ _page: 1 }),
