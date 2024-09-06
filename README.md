@@ -30,7 +30,7 @@ export default {
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 
-- Effector
+- Effector (divide of logic and ui)
 - React atomic router
 - ky
 - antd
@@ -48,3 +48,4 @@ cd mock-be `npm start`
 
 ![login](login.png)
 ![posts](posts.png)
+![post](post.png)

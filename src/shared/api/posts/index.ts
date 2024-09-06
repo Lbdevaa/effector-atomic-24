@@ -3,6 +3,7 @@ import { ParamsPosts, ResponsePosts } from "./model";
 
 const getToken = () => `Bearer ${localStorage.getItem("token")}`;
 
+// services
 export const getPosts = async (params?: ParamsPosts) =>
   api
     .get("posts", {
