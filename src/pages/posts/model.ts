@@ -13,7 +13,8 @@ export const $posts = restore(getPostsFx, []);
 
 export const paginationChanged = createEvent<number>();
 export const queryChanged = createEvent<string>();
-const $pagination = restore(paginationChanged, 1);
+export const $pagination = restore(paginationChanged, 1);
+$pagination.reset(queryChanged); // on change query -> change pagination to 1
 const $query = restore(queryChanged, "");
 
 // когда query store или pagination store меняется, будет реагировать paramsStore
@@ -24,7 +25,14 @@ sample({
   target: getPostsFx,
 });
 
-chainRoute({
+// bad work
+// sample({
+//   clock: queryChanged,
+//   fn: () => 1,
+//   target: paginationChanged,
+// });
+
+export const routePostsLoaded = chainRoute({
   route: chainAuthorized(currentRoute),
   beforeOpen: {
     effect: getPostsFx,

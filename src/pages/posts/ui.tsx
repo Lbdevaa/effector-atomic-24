@@ -1,12 +1,24 @@
 import { useUnit } from "effector-react";
-import { $posts, getPostsFx } from "./model";
-import { Card, Flex, Space, Spin } from "antd";
+import {
+  $pagination,
+  $posts,
+  getPostsFx,
+  paginationChanged,
+  queryChanged,
+} from "./model";
+import { Card, Flex, Input, Pagination, Space, Spin } from "antd";
 import { Link } from "atomic-router-react";
 import { routes } from "@shared/config/router";
 import { BaseLayout } from "@shared/components/BaseLayout";
 
 export const Posts = () => {
-  const [posts, isLoading] = useUnit([$posts, getPostsFx.pending]);
+  const [posts, isLoading, page, pageChanged, searchChanged] = useUnit([
+    $posts,
+    getPostsFx.pending,
+    $pagination,
+    paginationChanged,
+    queryChanged,
+  ]);
 
   return (
     <BaseLayout>
@@ -16,7 +28,7 @@ export const Posts = () => {
           style={{ paddingTop: "20px" }}
           styles={{ item: { width: "500px" } }}
         >
-          {/* <Input.Search onSearch={searchChanged} /> */}
+          <Input.Search onSearch={searchChanged} />
           {isLoading ? (
             <Flex justify="center">
               <Spin />
@@ -39,12 +51,13 @@ export const Posts = () => {
               </Card>
             ))
           )}
-          {/* <Pagination
+          <Pagination
             onChange={pageChanged}
             showSizeChanger={false}
             total={posts[0]?.total}
             current={page}
-          /> */}
+            style={{ justifyContent: "center" }}
+          />
         </Space>
       </Flex>
     </BaseLayout>

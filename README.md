@@ -44,3 +44,7 @@ log=pas `123@gmail.com`
 `npm run dev`
 
 cd mock-be `npm start`
+
+
+![login](login.png)
+![posts](posts.png)
